@@ -1,0 +1,73 @@
+package com.corejava.aggrigation_and_composition;
+
+public class os
+{
+	String name;
+	int size;
+
+	public os (String name,int size)
+	{
+		this.name=name;
+		this.size=size;
+	}	
+		 public String getname()
+		{
+			return name;
+		}
+		 public int getsize()
+		 {
+			 return size;
+		 }
+	}
+
+
+class charger
+{
+	String brand;
+	double voltage;
+	
+	public charger (String brand,double voltage)
+	{
+		this.brand=brand;
+		this.voltage=voltage;
+	}
+	
+	public String getbrand()
+	{
+		return brand;
+	}
+	public double getvoltage()
+	{
+		return voltage;
+	}
+}
+
+
+
+class mobile 
+{
+	os o=new os("Android",512);
+	public void has (charger c)
+	{
+		
+	}
+}
+
+package com.corejava.aggrigation_and_composition;
+
+public class main
+{
+	public static void main (String...args)
+	{
+		mobile m=new mobile();
+		System.out.println (m.o.getname());
+		System.out.println (m.o.getsize());
+		
+		charger c1=new charger ("vook",24);
+		m.has(c1);
+		
+		System.out.println (c1.getbrand());
+		System.out.println (c1.getvoltage());
+	}
+
+}
